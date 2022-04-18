@@ -1,3 +1,6 @@
+import CartWidget from "./CartWidget"
+
+
 const NavBar = () => {
 
     const menu = {
@@ -16,11 +19,12 @@ const NavBar = () => {
         textAlign: 'center'
     }
     return (
-        <div>
-            <button style={menu}>Inicio</button>
-            <button style={menu}>Productos</button>
-            <button style={menu}>Ayuda</button>
-            <button style={menu}>Contactanos</button>
+        <div >
+            <CartWidget/>
+            <button style={menu} >Inicio</button>
+            <button style={menu} >Productos</button>
+            <button style={menu} >Ayuda</button>
+            <button style={menu} >Contactanos</button>
         </div>
     )
 }
