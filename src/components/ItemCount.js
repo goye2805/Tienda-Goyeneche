@@ -32,7 +32,7 @@ const ItemCount = (props) => {
   return (
     <>
 
-    <div>ItemCount</div>
+    <div>C A N T I D A D</div>
     <div class="border-dashed border-2 border-sky-500">
     <button onClick={res} class="text-4xl"> - </button>
     <input type="text" placeholder={count} class="text-center text-2xl"></input>

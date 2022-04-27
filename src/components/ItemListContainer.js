@@ -1,8 +1,14 @@
-const ItemListContainer = (props) => {
+import ItemList from "./ItemList"
+
+
+const ItemListContainer = () => {
+
   return (
-    <h1 className="text-3xl font-bold" style={{color:'blue', border:'double'}}>
-      {props.greeting}
-    </h1>
+    <div>
+      <h1>P R O D U C T O S</h1>
+      <ItemList/>
+    </div>
   )
+
 }
 export default ItemListContainer

@@ -4,13 +4,13 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 
 
+
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting="SALUDOS!!!"/>
+      <ItemListContainer/>
       <ItemCount stock="5" inicial="1"/>
-     
     </div>
   );
 }
