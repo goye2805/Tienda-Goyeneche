@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <NavBar/>
       <ItemListContainer/>
-      <ItemCount stock="5" inicial="1"/>
     </div>
   );
 }

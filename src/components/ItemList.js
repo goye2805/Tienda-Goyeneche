@@ -11,7 +11,7 @@ const ItemList = () => {
      getProducto()
    }, [])
 
-   const getProducto = () => {
+    const getProducto = () => {
      const getProductoPromesa = new Promise((resolve) =>{
        setTimeout(() =>{
          resolve(productList)
@@ -24,7 +24,7 @@ const ItemList = () => {
     }
     return (
       <div>
-        {producto.map (p => <Item key={p.id} producto={p}/> )}
+        {producto.map (p => <Item key={p.id} prod={p}/> )}
       </div>
     ) 
 }
