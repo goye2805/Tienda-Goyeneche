@@ -74,8 +74,8 @@ const products = [
 	{
 		id: 6,
 		category: "Pantalones",
-		title: "Eco Ezra Matt Rosegold",
-		brand: "Kaya Elox",
+		title: "Pantalones1",
+		brand: "Marca XXXXX",
 		price: 16800,
 		stock: 11,
 		picUrl:
@@ -86,8 +86,8 @@ const products = [
 	{
 		id: 7,
 		category: "Pantalones",
-		title: "Eco Ezra Matt Blue",
-		brand: "Kaya Elox",
+		title: "Pantalones2",
+		brand: "Marca XXXXX",
 		price: 16800,
 		stock: 8,
 		picUrl:
@@ -98,8 +98,8 @@ const products = [
 	{
 		id: 8,
 		category: "Pantalones",
-		title: "Eco Slice - Small Rosegold",
-		brand: "Kaya Elox",
+		title: "Pantalones3",
+		brand: "Marca XXXXX",
 		price: 13000,
 		stock: 14,
 		picUrl:
@@ -110,8 +110,8 @@ const products = [
 	{
 		id: 9,
 		category: "Pantalones",
-		title: "Aeon V4",
-		brand: "Lounge Jungle",
+		title: "Pantalones4",
+		brand: "Marca XXXXX",
 		price: 24000,
 		stock: 3,
 		picUrl:
@@ -122,8 +122,8 @@ const products = [
 	{
 		id: 10,
 		category: "Pantalones",
-		title: "Set Twist Glow",
-		brand: "Kaya Elox Eco",
+		title: "Pantalones5",
+		brand: "Marca XXXXX",
 		price: 21000,
 		stock: 6,
 		picUrl:
@@ -134,8 +134,8 @@ const products = [
 	{
 		id: 11,
 		category: "Pantalones",
-		title: "Red Clear",
-		brand: "Vyro Penta",
+		title: "Pantalones6",
+		brand: "Marca XXXXX",
 		price: 19650,
 		stock: 4,
 		picUrl:
