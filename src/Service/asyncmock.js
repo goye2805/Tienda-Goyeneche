@@ -2,146 +2,146 @@ const products = [
 	{
 		id: 0,
 		category: "Camizas",
-		title: "Blueberry Mint",
+		title: "Camisa de vestir azul",
 		brand: "Zomo",
-		price: 450,
+		price: 2450,
 		stock: 9,
 		picUrl:
-			"https://www.pngegg.com/es/search?q=camisa",
+			"https://i.ibb.co/TW6RhNb/camisa1.png",
 		description:
-			"Una combinación que tuvo éxito. Zomo presenta a los amantes de la buena esencia, y que son exigentes tratándose de una mezcla de calidad. Ella trae el sabor exótico de blueberry con la refrescancia de la menta.",
+			"camisa de vestir azul, camiseta camisa de vestir, camisa de vestir, camiseta, azul png",
 	},
 	{
 		id: 1,
-		category: "Pantalones",
-		title: "Cola Mint",
+		category: "Camizas",
+		title: "Camisa Azul Clipart",
 		brand: "Zomo",
-		price: 450,
-		stock: 9,
+		price: 1450,
+		stock: 5,
 		picUrl:
-			"https://www.freepng.es/png-b76e91/",
+			"https://i.ibb.co/3v9JNP3/camisa2.png",
 		description:
-			"Zomo ofrece a los narguileros una esencia que combina el sabor y el refresco de la menta con refrescos de cola. Esta esencia llegó a abrir todos los sentidos, su sabor se asemeja a una refrescante cola con el toque de menta para hacerlo aún más llamativo. Ideal para quienes gustan de sabores y aromas dulces y suaves.",
+			"Camisa Azul Clipart....",
 	},
 	{
 		id: 2,
-		category: "tabacos",
-		title: "Cool Lemon",
+		category: "Camizas",
+		title: "Camisa Naranja",
 		brand: "Zomo",
-		price: 450,
-		stock: 9,
+		price: 4450,
+		stock: 15,
 		picUrl:
-			"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COOL_LEMON.jpg",
+			"https://i.ibb.co/H7665SW/camisa3.png",
 		description:
-			"Para aquellos que les gusta el sabor cítrico del limón, les encantará esta sensacional esencia. Este sabor te lleva a la sensación cítrica del limón con una frescura sin igual. Ideal para relajar los pensamientos de quienes gustan de una buena esencia en sus sesiones.",
+			"Camisa Naranja.......",
 	},
 	{
 		id: 3,
-		category: "tabacos",
-		title: "Framboera",
+		category: "Camizas",
+		title: "Camisa Gris",
 		brand: "Zomo",
-		price: 450,
-		stock: 9,
+		price: 3450,
+		stock: 19,
 		picUrl:
-			"https://cdn.zomoofficial.com/wp-content/uploads/2020/11/ZOMO_2019_PY_50G_FRAMBOERA.png",
+			"https://i.ibb.co/xfCXh3V/camisa4.jpg",
 		description:
-			"Ah, que coctel delicioso. El sabor Framboera es todo lo que esta bien, hicimos un drink especial con frambuesa y pera, el resultado fue increíble. Experimenta ese sabor que llegó con todo en la línea Drinks.",
+			"ropa de camisa para hombres",
 	},
 	{
 		id: 4,
-		category: "tabacos",
-		title: "Tanger",
+		category: "Camizas",
+		title: "Camisa de trabajo de algodón",
 		brand: "Zomo",
-		price: 450,
-		stock: 9,
+		price: 2450,
+		stock: 99,
 		picUrl:
-			"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_SPLASH_TANGER.jpg",
+			"https://i.ibb.co/sPmb2M9/camisa5.jpg",
 		description:
-			"Una esencia que aporta todo el poder de la mandarina. Un sabor con ese toque delicado y cítrico que solo te da la mandarina.",
+			"Bulwark - Camisa de trabajo de algodón resistente al fuego de 7 onzas con ventilación de manga para hombre",
 	},
 	{
 		id: 5,
-		category: "tabacos",
-		title: "Dry Zahara",
+		category: "Camizas",
+		title: "Camisa Morada",
 		brand: "Zomo",
 		price: 500,
 		stock: 9,
 		picUrl:
-			"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_DRY_SAHARA.jpg",
+			"https://i.ibb.co/ydNTC3J/camisa5.png",
 		description:
-			"Los misterios del desierto en una experiencia increíble, eso es lo que Zomo trae con la esencia Dry Sahara de la línea World Experience, que está siendo un éxito en las tiendas de narguile y en las sesiones del país. Una sensación refrescante a café intenso. Dry Sahara posee un sabor único, el contraste del calor local con un sabor fresco. Un viaje alrededor del mundo por medio de nuestras esencias. Llega la línea World Experience, que une sabores de todo el mundo directamente en tu cazoleta.",
+			"Camisa morada de vestir............",
 	},
 	{
 		id: 6,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Eco Ezra Matt Rosegold",
 		brand: "Kaya Elox",
 		price: 16800,
 		stock: 11,
 		picUrl:
-			"https://i.ibb.co/m4PSSXj/cachimba-kaya-elox-eco-ezra-matt-rosegold-550x550h.jpg",
+			"https://i.ibb.co/vjTfzm9/pantalon5.jpg",
 		description:
-			"Simple, pero elegante: así es la nueva cachimba Kaya ELOX Eco Ezra - Matt Rosegold. Su montaje es sencillo y rápido gracias al sistema Click, que nos permite conectar el cuerpo con la base con un simple movimiento. Todas las partes metálicas están fabricadas en aluminio.",
+			"Pantalones para vesttir........",
 	},
 	{
 		id: 7,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Eco Ezra Matt Blue",
 		brand: "Kaya Elox",
 		price: 16800,
-		stock: 18,
+		stock: 8,
 		picUrl:
-			"https://i.ibb.co/zbKjNZV/cachimba-kaya-elox-eco-ezra-matt-blue-550x550h.jpg",
+			"https://i.ibb.co/7Q6scJ1/pantalon1.png",
 		description:
-			"Simple, pero elegante: así es la nueva cachimba Kaya ELOX Eco Ezra - Matt Blue. Su montaje es sencillo y rápido gracias al sistema Click, que nos permite conectar el cuerpo con la base con un simple movimiento. Todas las partes metálicas están fabricadas en aluminio.",
+			"Pantalones para vesttir........",
 	},
 	{
 		id: 8,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Eco Slice - Small Rosegold",
 		brand: "Kaya Elox",
 		price: 13000,
 		stock: 14,
 		picUrl:
-			"https://i.ibb.co/fHhckxk/cachimba-kaya-elox-eco-slice-small-rose-550x550h.jpg",
+			"https://i.ibb.co/pXmJM8V/pantalon2.jpg",
 		description:
-			"La cachimba Kaya ELOX ECO Slice Small Rosegold es la versión más elegante de la ECO Slice Small. De aluminio, con 54 cm de altura y una apariencia de escándalo, con el rosa oro como protagonista.",
+			"Pantalones para vesttir........",
 	},
 	{
 		id: 9,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Aeon V4",
 		brand: "Lounge Jungle",
 		price: 24000,
 		stock: 3,
 		picUrl:
-			"https://i.ibb.co/ZY4gnsm/cachimba-aeon-edition-3-lounge-jungle-550x550.png",
+			"https://i.ibb.co/PgGcFGG/pantalon3.jpg",
 		description:
-			"La cachimba AEON Hookah Edition 4 - Lounge Jungle es la versión mejorada de la Edition 3. Como todos los productos de AEON, ha sido producida en Alemania bajo los más altos estándares de calidad, incluyendo como material principal el acero inoxidable V2A. ",
+			"Pantalones para vesttir........",
 	},
 	{
 		id: 10,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Set Twist Glow",
 		brand: "Kaya Elox Eco",
 		price: 21000,
 		stock: 6,
 		picUrl:
-			"https://i.ibb.co/jTXd4D1/cachimba-kaya-set-maletin-completo-elox-eco-580-twist-glow-550x550h.jpg",
+			"https://i.ibb.co/mqYZwKt/pantalon4.jpg",
 		description:
-			"Simple, pero elegante: así es la nueva cachimba Kaya ELOX Eco Ezra - Matt Blue. Su montaje es sencillo y rápido gracias al sistema Click, que nos permite conectar el cuerpo con la base con un simple movimiento. Todas las partes metálicas están fabricadas en aluminio.",
+			"Pantalones para vesttir........",
 	},
 	{
 		id: 11,
-		category: "narguilas",
+		category: "Pantalones",
 		title: "Red Clear",
 		brand: "Vyro Penta",
 		price: 19650,
 		stock: 4,
 		picUrl:
-			"https://i.ibb.co/s1QvSkd/cachimba-vyro-penta-red-clear-hookah-550x550.jpg",
+			"https://i.ibb.co/84CNNRF/pantalon6.jpg",
 		description:
-			"Una auténtica revolución llega con la Vyro Penta Red Clear, la cachimba compacta de la que todo el mundo habla. Esta shisha combina el acero inoxidable V2A con la fibra de carbono real, la resina y la madera (impermeable), dando lugar a un auténtico espectáculo.",
+			"Pantalones para vesttir........",
 	},
 ]
 
