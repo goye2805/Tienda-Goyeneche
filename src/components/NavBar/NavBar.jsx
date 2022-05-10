@@ -48,6 +48,9 @@ const NavBar = () => {
 						<li>
 							<Link to="/category/Pantalones">Pantalones</Link>
 						</li>
+						<li>
+						<Link to="/cart">Ver Carro</Link>
+						</li>
 					</ul>
 				</div>
 				<div className="navbar-end">
