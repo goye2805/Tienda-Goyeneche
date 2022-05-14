@@ -3,6 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBA6WCMOr-f9nz3Xl_npJ8pEYaGxCNBcUA",
+  authDomain: "e-commerce-b526a.firebaseapp.com",
+  projectId: "e-commerce-b526a",
+  storageBucket: "e-commerce-b526a.appspot.com",
+  messagingSenderId: "711342705883",
+  appId: "1:711342705883:web:a256eb6f51f908205e50fe",
+  measurementId: "G-BTVZDZ0ZHR"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 ReactDOM.render(
   <React.StrictMode>

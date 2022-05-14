@@ -34,6 +34,9 @@ const NavBar = () => {
 							<li>
 								<Link to="/category/Pantalones">Pantalones</Link>
 							</li>
+							<li>
+						        <Link to="/cart">Ver Carro</Link>
+						    </li>
 						</ul>
 					</div>
 					<Link to="/" className="btn btn-ghost normal-case text-xl">
