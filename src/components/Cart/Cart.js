@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import { CartItem } from "./CartItem"
@@ -21,21 +20,21 @@ export const Cart = () => {
     <hr />
     
     <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 hero-content flex-col lg:flex-row">
             {cart.length !== 0 &&(
             <>
 
                 {cart.map(product =>(
                     <CartItem key={product.id} product={product}/>
                 ))}
-                <div className="text-end m-3">
+                <div className="text-end m-3 ">
                     <button className="btn btn-danger " onClick={deleteCart}>Limpiar Carrito</button>
                 </div>
             </>
             )}
             {cart.length === 0 && 
             <>
-                <h3>Parece que no hay productos en el carrito,</h3>
+                <h3>Parece que no hay productos en el carrito - </h3>
                 <Link to='/' className="btn bg-principal text-white d-block w-100 mt-3 fw-bolder fs-5">Seguir Comprando   <i className="ps-3 fas fa-smile-wink fs-5"></i></Link>
             </>
             }
@@ -53,6 +52,7 @@ export const Cart = () => {
                         <hr />
                         <p>Completa con tus datos para finalizar la compra</p>
                        
+                        <button className="btn btn-success d-block mt-2">Enviar orden</button>
 
                     </div>
                 </>

@@ -1,5 +1,10 @@
-export const CartResume = () => {
+export const CartResume = ({prod}) => {
   return (
-    <div>CartResume</div>
+    <>
+    <div className="text-end">
+        <h4>$ {prod.price * prod.quantity}</h4>
+        <hr />
+    </div>
+    </>
   )
 }
