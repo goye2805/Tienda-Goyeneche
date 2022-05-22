@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { Cart } from "./components/Cart/Cart"
 import NavBar from "./components/NavBar/NavBar"
+import ProductoFB from "./components/ProductoFB/ProductoFB"
 
 function App() {
 	return (
@@ -25,7 +26,9 @@ function App() {
 							/>
 							<Route path="/item/:id" element={<ItemDetailContainer />} />
 							
-							{/*<Route path="/cart" element={<Cart />} />*/}
+							<Route path="/cart" element={<Cart />} />
+
+							<Route path="/firebase" element={<ProductoFB />} />
 						</Routes>
 					</BrowserRouter>
 				</CartContextProvider>

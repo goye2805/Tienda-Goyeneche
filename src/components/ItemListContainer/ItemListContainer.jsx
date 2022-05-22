@@ -1,13 +1,14 @@
+import { collection, doc, getDocs, getFirestore, query, where } from "firebase/firestore"
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getItem } from "../../Service/asyncmock"
 import ItemList from "./ItemList/ItemList"
 
 const ItemListContainer = ({ greetings }) => {
-	const [category, setCategory] = useState()
+	const [category, setProduct] = useState()
 	const { categoryId } = useParams()
 
-	useEffect(() => {
+	//este es local
+	{/*useEffect(() => {
 		if (categoryId === undefined) {
 			getItem().then((resp) => setCategory(resp))
 		} else {
@@ -15,7 +16,39 @@ const ItemListContainer = ({ greetings }) => {
 				setCategory(resp.filter((product) => product.category === categoryId))
 			)
 		}
+	}, [categoryId])*/}
+
+	//este es de firebase - trae todo sin filtro
+	{/*useEffect(() => {
+
+		const db = getFirestore()
+	  
+		const itemCollection = collection(db,'items')
+		getDocs(itemCollection).then ((snapshot) => {
+			setProduct (snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+		})
+	  }, [])*/}
+
+	useEffect(() => {
+
+		const db = getFirestore()
+
+		var items
+		if (categoryId) {
+			items = query(collection(db, 'items'), where('category', '==', categoryId))
+			getDocs(items).then((snapshot) => {
+				setProduct(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+			})
+		}
+		else {
+			items = collection(db, 'items')
+			getDocs(items).then((snapshot) => {
+				setProduct(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+			})
+		}
+
 	}, [categoryId])
+
 
 	return (
 		<>

@@ -1,3 +1,4 @@
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 import React, { createContext, useContext, useEffect, useState } from "react"
 import { getItem } from "../Service/asyncmock"
 
@@ -9,7 +10,12 @@ const AppContextProvider = ({ children }) => {
 	const [products, setProducts] = useState([])
 
 	useEffect(() => {
-		getItem().then((resp) => setProducts(resp))
+		const db = getFirestore()
+
+		var items = collection(db, 'items')
+		getDocs(items).then((snapshot) => {
+			setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+		})
 	})
 	return (
 		<AppContext.Provider value={{ products }}>{children}</AppContext.Provider>

@@ -1,3 +1,4 @@
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore"
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getItem } from "../../Service/asyncmock"
@@ -7,12 +8,17 @@ const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({})
 	const { id } = useParams()
 
+
 	useEffect(() => {
-		if (id === undefined) {
-			getItem().then((resp) => setProduct(resp))
-		} else {
-			getItem().then((resp) => setProduct(resp[id]))
-		}
+
+		const db = getFirestore()
+
+		var items
+
+		items = doc(db, 'items', id)
+		getDoc(items).then((snapshot) => {
+			setProduct({ id: snapshot.id, ...snapshot.data() })
+		})
 	}, [id])
 	return (
 		<>

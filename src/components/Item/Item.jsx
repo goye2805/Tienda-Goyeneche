@@ -15,6 +15,7 @@ const Item = ({ producto }) => {
 							${producto.price}
 						</span>
 					</div>
+					
 					<div className="card-actions justify-end">
 						<Link to={`/item/${producto.id}`} className="btn btn-primary">
 							Ver más
