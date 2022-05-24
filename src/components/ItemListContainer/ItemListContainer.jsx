@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, getFirestore, query, where } from "firebase/firestore"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "./ItemList/ItemList"
@@ -34,6 +34,7 @@ const ItemListContainer = ({ greetings }) => {
 		const db = getFirestore()
 
 		var items
+
 		if (categoryId) {
 			items = query(collection(db, 'items'), where('category', '==', categoryId))
 			getDocs(items).then((snapshot) => {

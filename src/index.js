@@ -8,13 +8,12 @@ import { getAnalytics } from "firebase/analytics";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBA6WCMOr-f9nz3Xl_npJ8pEYaGxCNBcUA",
-  authDomain: "e-commerce-b526a.firebaseapp.com",
-  projectId: "e-commerce-b526a",
-  storageBucket: "e-commerce-b526a.appspot.com",
-  messagingSenderId: "711342705883",
-  appId: "1:711342705883:web:a256eb6f51f908205e50fe",
-  measurementId: "G-BTVZDZ0ZHR"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID
 };
 
 // Initialize Firebase
@@ -26,7 +25,7 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-  
+
 );
 
 // If you want to start measuring performance in your app, pass a function
