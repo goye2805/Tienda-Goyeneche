@@ -1,14 +1,14 @@
-import {collection, getDoc, getDocs, getFirestore} from "firebase/firestore"
+import { collection, getDoc, getDocs, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetailContainer/ItemDetail/ItemDetail"
 import ItemList from "../ItemListContainer/ItemList/ItemList"
 
 const ProductoFB = () => {
 
-const [product, setProduct] = useState({})
+  const [product, setProduct] = useState({})
 
-//este trae un item por ID
-{/*useEffect(() => {
+  //este trae un item por ID
+  {/*useEffect(() => {
   
     const db = getFirestore()
 
@@ -18,8 +18,8 @@ const [product, setProduct] = useState({})
     })
 }, [])*/}
 
-//este me trae todo del DB
-useEffect(() => {
+  //este me trae todo del DB
+  {/*useEffect(() => {
 
   const db = getFirestore()
 
@@ -27,16 +27,16 @@ useEffect(() => {
   getDocs(itemCollection).then ((snapshot) => {
       setProduct (snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
   })
-}, [])
+}, [])*/}
 
-console.log(product)
+  console.log(product)
 
   return (
     <>
-        <div>ProductoFB</div>
-        
+      <div>ProductoFB</div>
+
     </>
-    )
+  )
 
 }
 export default ProductoFB
