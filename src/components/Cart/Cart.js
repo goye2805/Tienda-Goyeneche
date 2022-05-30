@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import { CartItem } from "./CartItem"
 import { CartResume } from "./CartResume"
-import { getFirestore } from "firebase/firestore"
+import { addDoc, collection, getFirestore, Timestamp } from "firebase/firestore"
 import swal from 'sweetalert2'
 
 const initialBuyer = {
@@ -12,10 +12,12 @@ const initialBuyer = {
     email: ''
 }
 
-
 export const Cart = () => {
 
     const [buyer, setBuyer] = useState(initialBuyer)
+
+    const [ordenid, setOrdenId] = useState()
+
     const { cart, deleteCart } = useCartContext()
     let total = 0
 
@@ -25,25 +27,47 @@ export const Cart = () => {
         total += price
     }
 
-    const order = { buyer, item: [cart.id, cart.title, cart.price], total: cart.total }
+    const handlerSubmit = async (e) => {
 
-    const EnvioOrden = () => {
+        const order = {
+            buyer,
+            item: cart.map((cart) => ({ id: cart.id, title: cart.title, price: cart.price })),
+            date: Timestamp.fromDate(new Date()), total
+        }
 
+        e.preventDefault();
         if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
-            swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
 
+            const db = getFirestore()
+
+            const ordenCollection = collection(db, "orders")
+
+            const respon = await addDoc(ordenCollection, order)
+
+            swal.fire({
+                title: "Tu orden fue enviada con éxito!",
+                text: `Tu n° de orden es: ${respon.id}`,
+                icon: "success",
+                button: "Ok",
+            })
+
+                .then(deleteCart())
         } else {
-            swal.fire(
-                'The Internet?',
-                'That thing is still around?',
-                'question'
-            )
+            swal.fire({
+                title: "Hubo un error en tus datos",
+                text: "Revisa el formulario de tus datos y vuelve a enviar el pedido",
+                icon: "error",
+                button: "Ok",
+            })
         }
     }
+    const handlerChange = (e) => {
+        setBuyer({
+            ...buyer,
+            [e.target.name]: e.target.value
+        })
+    }
+
 
     return (
         <div className="container">
@@ -81,9 +105,12 @@ export const Cart = () => {
                                 <h3>Total a pagar: ${total}</h3>
 
                                 <hr />
+
                                 <p>Completa con tus datos para finalizar la compra</p>
 
                                 <form
+                                    onSubmit={handlerSubmit}
+                                    onChange={handlerChange}
                                     className="d-flex flex-column align-center container mt-2 mb-3">
 
                                     <input
@@ -91,22 +118,22 @@ export const Cart = () => {
                                         type="text"
                                         placeholder="Nombre"
                                         name="name"
-                                        value={order.name} />
+                                        value={buyer.name} />
                                     <input
                                         className="form-control mb-2"
                                         type="number"
                                         placeholder="Telefono"
                                         name="phone"
-                                        value={order.phone} />
+                                        value={buyer.phone} />
                                     <input
                                         className="form-control mb-2"
                                         type="email"
                                         placeholder="Email"
                                         name="email"
-                                        value={order.email} />
-                                    <button className="btn btn-success d-block mt-2" onClick={EnvioOrden}>Enviar orden</button>
-                                </form>
+                                        value={buyer.email} />
 
+                                    <button className="btn btn-success d-block mt-2">Enviar orden</button>
+                                </form>
                             </div>
                         </>
                     )}
