@@ -16,8 +16,6 @@ export const Cart = () => {
 
     const [buyer, setBuyer] = useState(initialBuyer)
 
-    const [ordenid, setOrdenId] = useState()
-
     const { cart, deleteCart } = useCartContext()
     let total = 0
 
@@ -50,8 +48,8 @@ export const Cart = () => {
                 icon: "success",
                 button: "Ok",
             })
-
                 .then(deleteCart())
+
         } else {
             swal.fire({
                 title: "Hubo un error en tus datos",

@@ -7,28 +7,6 @@ const ItemListContainer = ({ greetings }) => {
 	const [category, setProduct] = useState()
 	const { categoryId } = useParams()
 
-	//este es local
-	{/*useEffect(() => {
-		if (categoryId === undefined) {
-			getItem().then((resp) => setCategory(resp))
-		} else {
-			getItem().then((resp) =>
-				setCategory(resp.filter((product) => product.category === categoryId))
-			)
-		}
-	}, [categoryId])*/}
-
-	//este es de firebase - trae todo sin filtro
-	{/*useEffect(() => {
-
-		const db = getFirestore()
-	  
-		const itemCollection = collection(db,'items')
-		getDocs(itemCollection).then ((snapshot) => {
-			setProduct (snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
-		})
-	  }, [])*/}
-
 	useEffect(() => {
 
 		const db = getFirestore()
