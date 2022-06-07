@@ -1,9 +1,9 @@
 module.exports = {
 
   daisyui: {
-    themes: ["cupcake", "dark", "cmyk"],
+    themes: ["light", "dark", "aqua", "emerald"],
   },
-  
+
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
