@@ -55,7 +55,7 @@ const Checkout = () => {
 
             Swal.fire({
                 title: "Tu orden fue enviada con éxito!",
-                text: `!Muchas Gracias por tu compra ${buyer.name} ${buyer.lastname}  -  Tu n° de orden es: ${respon.id}`,
+                text: `!!Muchas Gracias por tu compra ${buyer.name} ${buyer.lastname}  -  Tu n° de orden es: ${respon.id}¡¡`,
                 icon: "success",
                 button: "Ok",
             })
