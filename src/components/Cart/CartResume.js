@@ -1,10 +1,16 @@
-export const CartResume = ({prod}) => {
+import { formatPrice } from "../Helpers/Helpers"
+
+export const CartResume = ({ prod }) => {
+
+  const styles = {
+    text: "text-xs text-gray-700 tracking-wider leading-loose",
+  }
   return (
     <>
-    <div className="text-end">
-        <h4>$ {prod.price * prod.quantity}</h4>
+      <div className={styles.text}>
+        <h4>{formatPrice(prod.price * prod.quantity)} - {prod.title}</h4>
         <hr />
-    </div>
+      </div>
     </>
   )
 }

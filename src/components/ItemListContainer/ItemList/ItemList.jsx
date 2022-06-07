@@ -4,8 +4,8 @@ import Item from "../../Item/Item"
 const ItemList = ({ category }) => {
 	return (
 		<>
-			<div className="container mx-auto flex flex-wrap gap-4 justify-center">
-				{category && 
+			<div className="mx-auto flex flex-wrap gap-20 justify-center bg-white">
+				{category &&
 					category.map((producto) => (
 						<Item key={producto.id} producto={producto} />
 					))}
