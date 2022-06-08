@@ -1,9 +1,9 @@
 
 # GoyeShop
 
-<hr>
 
-##Datos:
+
+## Datos:
 
 **Curso:** *React / Coderhouse*
 
@@ -15,3 +15,16 @@
 
 <hr>
 
+## Herramientas
+
+**Tecnologías**
+
+*HTML5*
+*CSS3*
+*JavaScript*
+
+**Librerías y frameworks**
+
+*Node.js*
+*React*
+*TailwindCSS*
