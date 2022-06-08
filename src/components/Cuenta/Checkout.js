@@ -52,7 +52,7 @@ const Checkout = () => {
 
         e.preventDefault();
 
-        if (buyer.name !== '' && buyer.lastname !== '' && buyer.email !== '' && (buyer.email === buyer.confimail) && emailRegex.test(buyer.email, buyer.confimail) && telephoneRegex.test(buyer.phone)) {
+        if (buyer.name !== '' && buyer.lastname !== '' && buyer.email !== '' && buyer.phone !== '' && (buyer.email === buyer.confimail) && emailRegex.test(buyer.email, buyer.confimail) && telephoneRegex.test(buyer.phone)) {
 
             const db = getFirestore()
 
