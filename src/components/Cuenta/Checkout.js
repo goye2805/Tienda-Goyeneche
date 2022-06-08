@@ -1,6 +1,5 @@
 import { addDoc, collection, getFirestore, Timestamp } from "firebase/firestore";
 import { useState } from "react";
-
 import Swal from "sweetalert2";
 import { useCartContext } from "../../context/CartContext";
 
@@ -18,10 +17,17 @@ const Checkout = () => {
 
     const [buyer, setBuyer] = useState(initialBuyer)
 
+    var total = 0
+
     const { cart, deleteCart } = useCartContext()
 
+    for (let i = 0; i < cart.length; i++) {
+        const price = cart[i].price * cart[i].quantity;
 
-    let total = 0
+        total += price
+    }
+
+
 
     const styles = {
         title: "font-medium text-xl text-gray-800 tracking-wider leading-tight uppercase",
@@ -40,7 +46,8 @@ const Checkout = () => {
         const order = {
             buyer,
             item: cart.map((cart) => ({ id: cart.id, title: cart.title, price: cart.price })),
-            date: Timestamp.fromDate(new Date()), total
+            date: Timestamp.fromDate(new Date()),
+            total
         }
 
         e.preventDefault();
@@ -79,6 +86,7 @@ const Checkout = () => {
             [e.target.name]: e.target.value
         })
     }
+
 
 
     return (
